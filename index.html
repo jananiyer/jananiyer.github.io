@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1300" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Janani Iyer</title>
   <link rel="icon" href="images/Favicon.jpg" type="image/jpeg" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400&family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -25,7 +25,6 @@
       font-weight: 300;
       color: var(--text);
       background: var(--light);
-      min-width: 1300px;
     }
 
     /* NAV */
@@ -241,6 +240,47 @@
       padding: 20px;
       font-size: 12px;
       letter-spacing: 0.08em;
+    }
+    @media (max-width: 768px) {
+      /* NAV */
+      nav { padding: 0 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 11px; letter-spacing: 0.04em; }
+      .nav-logo img { height: 40px; }
+
+      /* HERO */
+      .hero-inner {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 40px 24px;
+        min-height: unset;
+      }
+      .hero-photo { width: 100%; height: 320px; }
+
+      /* CONTENT WRAPPER */
+      .content-wrap { width: 100%; padding: 0 24px; }
+
+      /* SECTIONS */
+      .section, .section.reverse {
+        flex-direction: column;
+        gap: 28px;
+        padding: 40px 0;
+      }
+      .section-image { width: 100%; }
+
+      /* ACKNOWLEDGMENTS */
+      #acknowledgments {
+        flex-direction: column;
+        gap: 28px;
+        padding: 40px 0;
+      }
+      .ack-image { width: 100%; }
+      .ack-image img { width: 100%; }
+
+      /* CONTACT */
+      #contact { padding: 40px 24px; }
+      .contact-buttons { flex-direction: column; align-items: center; }
     }
   </style>
 </head>

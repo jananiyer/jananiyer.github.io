@@ -88,9 +88,9 @@
     .gallery {
       column-count: 2;
       column-gap: 6px;
-      padding: 6px 6%;
-      max-width: 1200px;
+      width: 1200px;
       margin: 0 auto;
+      padding: 6px 0;
     }
 
     .gallery img {
@@ -100,12 +100,43 @@
       break-inside: avoid;
     }
 
+    .gallery-final-row {
+      display: flex;
+      gap: 6px;
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 0 6px 0;
+      align-items: flex-start;
+    }
+
+    .gallery-final-row img {
+      width: 50%;
+      display: block;
+    }
+
+    .gallery-thankyou {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px 0;
+    }
+
+    .gallery-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 36px;
+      color: var(--dark);
+      text-align: center;
+    }
+
     /* CONTACT ICONS */
     .portfolio-contact {
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 40px 20px 60px;
+      padding: 60px 20px 60px;
     }
 
     .icon-btn {
@@ -136,7 +167,7 @@
 
     @media (max-width: 600px) {
       nav { padding: 0 20px; }
-      .gallery { column-count: 1; padding: 6px 12px; }
+      .gallery { column-count: 1; width: 100%; padding: 6px 20px; }
     }
   </style>
 </head>
@@ -165,28 +196,39 @@
   <!-- GALLERY -->
   <div class="gallery">
     <img src="images/MatchaMiniLoaves.jpg" alt="Matcha mini loaves" />
-    <img src="images/MacaronsTeaPot_Compressed.jpg" alt="Macarons with teapot" />
+    <img src="images/ChocolateMousseCherries_Compressed.jpg" alt="Chocolate mousse with cherries" />
     <img src="images/SuraJonWeddingCake_Compressed.jpg" alt="Wedding cake" />
     <img src="images/LuvyWeddingSpread_Compressed.jpg" alt="Wedding dessert spread" />
-    <img src="images/TartsAerial1of2_Compressed.jpg" alt="Tarts aerial view 1" />
-    <img src="images/TartsAerial2of2_Compressed.jpg" alt="Tarts aerial view 2" />
+    <img src="images/Croquante_Compressed.jpg" alt="Croquante" />
     <img src="images/BlueberryTartTall_Compressed.jpg" alt="Blueberry tart" />
-    <img src="images/ChocolateMousseCherries_Compressed.jpg" alt="Chocolate mousse with cherries" />
+    <img src="images/OreoCupcakes_Compressed.jpg" alt="Oreo cupcakes" />
+    <img src="images/MacaronsTeaPot_Compressed.jpg" alt="Macarons with teapot" />
     <img src="images/ChocolatePeanutEntremet_Compressed.jpg" alt="Chocolate peanut entremet" />
     <img src="images/CheesecakeSaffronCaramel_Compressed.jpg" alt="Cheesecake saffron caramel" />
-    <img src="images/Croquante_Compressed.jpg" alt="Croquante" />
-    <img src="images/LeCordonBleuEclairs_Compressed.jpg" alt="Le Cordon Bleu eclairs" />
+    <img src="images/HariKarishma_CakeCard.jpg" alt="Hari Karishma cake card" />
+    <img src="images/TartsAerial1of2_Compressed.jpg" alt="Tarts aerial view 1" />
     <img src="images/ManyFlowerCupcakes_Compressed.jpg" alt="Flower cupcakes" />
     <img src="images/BlueberryCupcakes.jpeg" alt="Blueberry cupcakes" />
+    <img src="images/HariKarishma_PoundCakeWithFlowers.jpg" alt="Hari Karishma pound cake with flowers" />
     <img src="images/RaspberryMacarons_Compressed.jpg" alt="Raspberry macarons" />
+    <img src="images/HariKarishma_PoundCake.jpg" alt="Hari Karishma pound cake" />
+    <img src="images/MiniCakes.jpeg" alt="Mini cakes" />
     <img src="images/MiniMadeleines_Compressed.jpg" alt="Mini madeleines" />
     <img src="images/MiniBananaCranberryLoaf_Compressed.jpg" alt="Mini banana cranberry loaf" />
-    <img src="images/OreoCupcakes_Compressed.jpg" alt="Oreo cupcakes" />
-    <img src="images/SopapillaCupcakes_Compressed.jpg" alt="Sopapilla cupcakes" />
+    <img src="images/HariKarishma_AllThree.jpg" alt="Hari Karishma all three" />
+    <img src="images/NasturtiumCake.jpeg" alt="Nasturtium cake" />
+    <img src="images/TartsAerial2of2_Compressed.jpg" alt="Tarts aerial view 2" />
+    <img src="images/AnitaWeddingCakes_NoPeople_Compressed.jpg" alt="Anita wedding cakes" />
     <img src="images/SuraCupcakesAerial_Compressed.jpg" alt="Cupcakes aerial view" />
     <img src="images/PlatedDessert_Compressed.jpg" alt="Plated dessert" />
-    <img src="images/LuvyWeddingCake.jpg" alt="Luvy wedding cake" />
+    <img src="images/AnitaWeddingCakes_WithPeople_Compressed.jpg" alt="Anita wedding cakes with people" />
     <img src="images/SuraJon_Compressed.jpg" alt="Sura Jon" />
+    <img src="images/LuvyWeddingCake.jpg" alt="Luvy wedding cake" />
+  </div>
+
+  <!-- THANK YOU -->
+  <div class="gallery-thankyou">
+    <div class="gallery-text">Thank you for visiting!</div>
   </div>
 
   <!-- CONTACT ICONS -->
