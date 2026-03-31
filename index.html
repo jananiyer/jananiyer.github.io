@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1300" />
+  <title>Janani Iyer</title>
+  <link rel="icon" href="images/Favicon.jpg" type="image/jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400&family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark: #3a3a3a;
+      --light: #ffffff;
+      --accent: #c0392b;
+      --text: #333333;
+      --soft: #f5f5f5;
+      --nav-height: 80px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--light);
+      min-width: 1300px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      z-index: 100;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav-logo img { height: 52px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HERO */
+    #home {
+      margin-top: var(--nav-height);
+      background: var(--dark);
+      padding: 60px 0;
+    }
+
+    .hero-inner {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      min-height: 340px;
+      padding: 60px;
+    }
+
+    .hero-text { color: var(--light); text-align: center; }
+
+    .hero-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .hero-text p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .hero-photo {
+      width: 340px;
+      height: 380px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      flex-shrink: 0;
+    }
+
+    /* CONTENT WRAPPER */
+    .content-wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* SECTIONS */
+    .section {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      padding: 60px 0;
+    }
+
+    .section.reverse { flex-direction: row-reverse; }
+
+    /* Image displayed at its natural size, no stretching */
+    .section-image {
+      width: 580px;
+      height: auto;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .section-content {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    /* UNIFIED BODY TEXT — applies to all sections */
+    .section-content p,
+    .ack-content p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: #444;
+      margin-bottom: 16px;
+    }
+
+    .section-content a,
+    .ack-content a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .section-content a:hover,
+    .ack-content a:hover { color: var(--accent); }
+
+    /* UNIFIED SECTION LABELS */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+
+
+    /* DIVIDER */
+    .divider {
+      display: none;
+    }
+
+    /* ACKNOWLEDGMENTS */
+    #acknowledgments {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      padding: 60px 0;
+    }
+
+    .ack-content { flex: 1; }
+
+    .ack-image {
+      width: 700px;
+      flex-shrink: 0;
+    }
+
+    .ack-image img { width: 700px; display: block; }
+
+    .ack-content .section-label { margin-bottom: 20px; }
+
+    .ack-caption {
+      font-size: 11px;
+      color: #999;
+      text-align: right;
+      margin-top: 6px;
+    }
+
+    /* CONTACT */
+    #contact {
+      padding: 50px 48px;
+      text-align: center;
+      background: var(--soft);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-dark { background: var(--dark); color: var(--light); }
+    .btn-dark:hover { background: #555; }
+    .btn-outline { background: transparent; color: var(--dark); border: 1.5px solid var(--dark); }
+    .btn-outline:hover { background: var(--dark); color: var(--light); }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#home">
+      <img src="images/LittleJan.jpg" alt="jan logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#pastry">Pastry</a></li>
+      <li><a href="#acknowledgments">Acknowledgments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hi!</h1>
+        <p>I'm Jan.</p>
+      </div>
+      <img class="hero-photo" src="images/Headshot_Compressed.jpg" alt="Janani Iyer" />
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <div class="content-wrap">
+    <section class="section" id="science">
+      <img class="section-image" src="images/SRPCI_Cochlea_Compressed.jpg" alt="Cochlea endomicroscopy image" />
+      <div class="section-content">
+        <div class="section-label">Science</div>
+        <p>I am the Head of AI/ML Product at Absci, where I lead a team of AI Scientists, Software Engineers, Computational Biologists, and Product Managers in building and experimentally validating generative AI tools for therapeutic antibody design. I hope our technology will enable us to develop cures for diseases that have historically remained intractable. We recently launched <a href="https://www.biorxiv.org/content/10.64898/2026.01.14.699389v1" target="_blank">Origin-1</a>, our first AI platform for <em>de novo</em> antibody drug design.</p>
+        <p>Previously I was an AI/ML Product Manager at PathAI, where I led product development and translational science for their flagship AI digital pathology products in metabolic dysfunction-associated steatohepatitis (MASH, previously NASH), a liver disease with poor prognosis. I hope that the tools we built will help identify effective therapies and improve outcomes for MASH patients. One of them has recently been <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-qualifies-first-ai-drug-development-tool-will-be-used-mash-clinical-trials" target="_blank">qualified by the FDA</a> for clinical trial endpoint assessment.</p>
+        <p>Prior to joining PathAI, I completed a PhD in Speech and Hearing Bioscience and Technology (<a href="https://shbtphd.hms.harvard.edu/" target="_blank">SHBT</a>) at Harvard University. I designed, fabricated, and <a href="https://patents.google.com/patent/US12213781B2/en" target="_blank">patented</a> an endomicroscope that visualizes cells inside the cochlea — the small, snail-shaped organ that shelters the primary sensory receptors for hearing. I hope that our device will improve diagnostics for deafness, the most common sensory deficit in the world.</p>
+        <p><a href="https://www.linkedin.com/in/janiyer/" target="_blank">LinkedIn →</a></p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PASTRY -->
+    <section class="section reverse" id="pastry">
+      <img class="section-image" src="images/PlatedDessert_Compressed.jpg" alt="Plated dessert" />
+      <div class="section-content">
+        <div class="section-label">Pastry</div>
+        <p>I am always conducting experiments, whether in research labs, or in kitchens.</p>
+        <p><a href="pastryportfolio.html">Pastry Portfolio →</a></p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ACKNOWLEDGMENTS -->
+    <div id="acknowledgments">
+      <div class="ack-content">
+        <div class="section-label">Acknowledgments</div>
+        <p>I am grateful for the mentorship I have received over the course of my time as a scientist...</p>
+        <p>
+          <a href="https://www.linkedin.com/in/oscar-carrasco-zevallos" target="_blank">Oscar Carrasco-Zevallos, PhD</a> – Lila Sciences<br/>
+          <a href="https://med.stanford.edu/stankovic-lab.html" target="_blank">Konstantina Stankovic, MD, PhD</a> – Stanford University<br/>
+          <a href="https://www.tearneylab.org/" target="_blank">Guillermo Tearney, MD, PhD</a> – Massachusetts General Hospital<br/>
+          <a href="https://psychology.berkeley.edu/people/ervin-r-hafter" target="_blank">Ervin Hafter, PhD</a> – University of California, Berkeley
+        </p>
+        <p>...and as a pâtissière!</p>
+        <p>
+          Ryan Boya and Ben Lacy, <span style="text-decoration: underline;">ArtScience Culture Lab and Café</span><br/>
+          Stéphane Traon, <a href="https://www.instagram.com/patisserietraon/" target="_blank">Pâtisserie Traon</a><br/>
+          Jackie Bowers, <a href="https://www.petsipies.com/" target="_blank">Petsi Pies</a><br/>
+          Rob Tschudin, <a href="https://tschocolates.com/" target="_blank">Tschudin Chocolates and Confections</a>
+        </p>
+      </div>
+      <div class="ack-image">
+        <img src="images/HariComicStrip_Compressed.jpg" alt="Hari S. Iyer illustration" />
+        <p class="ack-caption">Hari S. Iyer, 2017</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-buttons">
+      <a class="btn btn-dark" href="https://www.linkedin.com/in/janiyer/" target="_blank">LinkedIn</a>
+      <a class="btn btn-dark" href="pastryportfolio.html">Pastry Portfolio</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy;2017 BY JANANI S. IYER.
+  </footer>
+
+</body>
+</html>

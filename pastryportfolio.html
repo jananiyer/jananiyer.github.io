@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastry Portfolio | Janani Iyer</title>
+  <link rel="icon" href="images/Favicon.jpg" type="image/jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark: #3a3a3a;
+      --light: #ffffff;
+      --accent: #c0392b;
+      --text: #333333;
+      --bg: #ede8e0;
+      --nav-height: 80px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      z-index: 100;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav-logo img { height: 52px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HEADER */
+    .portfolio-header {
+      margin-top: var(--nav-height);
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: var(--bg);
+    }
+
+    .portfolio-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 48px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .portfolio-header p {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    /* GALLERY */
+    .gallery {
+      column-count: 2;
+      column-gap: 6px;
+      padding: 6px 6%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+      margin-bottom: 6px;
+      break-inside: avoid;
+    }
+
+    /* CONTACT ICONS */
+    .portfolio-contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px 60px;
+    }
+
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--dark);
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .icon-btn:hover { background: #555; }
+
+    .icon-btn svg { width: 20px; height: 20px; fill: #fff; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .gallery { column-count: 1; padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="images/LittleJan.jpg" alt="jan logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#science">Science</a></li>
+      <li><a href="index.html#pastry">Pastry</a></li>
+      <li><a href="index.html#acknowledgments">Acknowledgments</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <div class="portfolio-header">
+    <h1>Janani S. Iyer</h1>
+    <p>Pastry Portfolio</p>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="gallery">
+    <img src="images/MatchaMiniLoaves.jpg" alt="Matcha mini loaves" />
+    <img src="images/MacaronsTeaPot_Compressed.jpg" alt="Macarons with teapot" />
+    <img src="images/SuraJonWeddingCake_Compressed.jpg" alt="Wedding cake" />
+    <img src="images/LuvyWeddingSpread_Compressed.jpg" alt="Wedding dessert spread" />
+    <img src="images/TartsAerial1of2_Compressed.jpg" alt="Tarts aerial view 1" />
+    <img src="images/TartsAerial2of2_Compressed.jpg" alt="Tarts aerial view 2" />
+    <img src="images/BlueberryTartTall_Compressed.jpg" alt="Blueberry tart" />
+    <img src="images/ChocolateMousseCherries_Compressed.jpg" alt="Chocolate mousse with cherries" />
+    <img src="images/ChocolatePeanutEntremet_Compressed.jpg" alt="Chocolate peanut entremet" />
+    <img src="images/CheesecakeSaffronCaramel_Compressed.jpg" alt="Cheesecake saffron caramel" />
+    <img src="images/Croquante_Compressed.jpg" alt="Croquante" />
+    <img src="images/LeCordonBleuEclairs_Compressed.jpg" alt="Le Cordon Bleu eclairs" />
+    <img src="images/ManyFlowerCupcakes_Compressed.jpg" alt="Flower cupcakes" />
+    <img src="images/BlueberryCupcakes.jpeg" alt="Blueberry cupcakes" />
+    <img src="images/RaspberryMacarons_Compressed.jpg" alt="Raspberry macarons" />
+    <img src="images/MiniMadeleines_Compressed.jpg" alt="Mini madeleines" />
+    <img src="images/MiniBananaCranberryLoaf_Compressed.jpg" alt="Mini banana cranberry loaf" />
+    <img src="images/OreoCupcakes_Compressed.jpg" alt="Oreo cupcakes" />
+    <img src="images/SopapillaCupcakes_Compressed.jpg" alt="Sopapilla cupcakes" />
+    <img src="images/SuraCupcakesAerial_Compressed.jpg" alt="Cupcakes aerial view" />
+    <img src="images/PlatedDessert_Compressed.jpg" alt="Plated dessert" />
+    <img src="images/LuvyWeddingCake.jpg" alt="Luvy wedding cake" />
+    <img src="images/SuraJon_Compressed.jpg" alt="Sura Jon" />
+  </div>
+
+  <!-- CONTACT ICONS -->
+  <div class="portfolio-contact">
+    <a class="icon-btn" href="https://www.instagram.com/jan.iyer" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy;2017 BY JANANI S. IYER.
+  </footer>
+
+</body>
+</html>
